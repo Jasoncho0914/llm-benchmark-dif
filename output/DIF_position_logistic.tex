@@ -1,0 +1,26 @@
+\begin{table}[ht]
+\centering
+\caption{Association between correct-answer position and DIF direction among Category-C questions. Regressions control for subcategory within each option count. Firth estimation and approximate Wald inference are used. The coefficient compares the lowest two observed positions; the joint test includes all positions. BH correction is separate across the 72 coefficient tests and 13 joint tests.}
+\label{tab:dif-position-logistic}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrlrrr}
+\toprule
+Benchmark & Options & C items & Contrast & $\beta$ [95\% interval] & Coefficient $q$ & Joint position $q$ \\
+\midrule
+BBH & 2 & 1106 & 2 vs. 1 & +4.18 [+3.77, +4.60] & $<0.001$ & $<0.001$ \\
+BBH & 3 & 398 & 2 vs. 1 & +0.20 [-0.36, +0.77] & $0.775$ & $<0.001$ \\
+BBH & 4 & 161 & 2 vs. 1 & -0.89 [-1.85, +0.07] & $0.216$ & $<0.001$ \\
+BBH & 5 & 346 & 2 vs. 1 & +1.32 [+0.51, +2.12] & $0.008$ & $<0.001$ \\
+BBH & 6 & 580 & 2 vs. 1 & +0.74 [+0.17, +1.31] & $0.041$ & $<0.001$ \\
+BBH & 7 & 289 & 2 vs. 1 & +0.70 [-0.67, +2.07] & $0.626$ & $<0.001$ \\
+BBH & 11 & 128 & 3 vs. 2 & -4.35 [-7.67, -1.03] & $0.041$ & $0.001$ \\
+BBH & 18 & 133 & 2 vs. 1 & +2.18 [+0.68, +3.67] & $0.022$ & $0.144$ \\
+BBH & 19 & 124 & 4 vs. 3 & -0.43 [-5.17, +4.32] & $1.000$ & $0.437$ \\
+MuSR & 2 & 153 & 2 vs. 1 & -1.65 [-2.37, -0.94] & $<0.001$ & $<0.001$ \\
+MuSR & 3 & 211 & 2 vs. 1 & -2.70 [-3.74, -1.66] & $<0.001$ & $<0.001$ \\
+MuSR & 4 & 49 & 2 vs. 1 & +1.31 [-0.41, +3.02] & $0.359$ & $0.143$ \\
+MuSR & 5 & 23 & 2 vs. 1 & -2.58 [-5.40, +0.23] & $0.217$ & $0.204$ \\
+\bottomrule
+\end{tabular}}
+\end{table}

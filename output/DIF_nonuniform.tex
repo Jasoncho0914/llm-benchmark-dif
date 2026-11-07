@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\caption{Nonuniform DIF between Llama and Qwen. Flags require a BH-adjusted family-by-score interaction $p\leq0.05$. Percentages use all questions or all questions in the specified primary MH category. Untestable fits remain in these denominators but are not flagged.}
+\label{tab:nonuniform-dif}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Benchmark & Items & Tested & Nonuniform (\%) & Within MH A (\%) & Within MH B (\%) & Within MH C (\%) \\
+\midrule
+BBH & 5{,}720 & 5{,}716 & 66.9 & 35.4 & 52.1 & 86.6 \\
+GPQA & 448 & 448 & 60.7 & 38.6 & 45.1 & 79.1 \\
+IFEval & 529 & 527 & 45.2 & 37.5 & 41.9 & 56.1 \\
+MATH & 1{,}100 & 1{,}072 & 28.8 & 25.1 & 37.9 & 46.8 \\
+MMLU-Pro & 11{,}083 & 10{,}999 & 60.5 & 43.0 & 62.3 & 78.2 \\
+MuSR & 683 & 681 & 45.4 & 40.8 & 40.0 & 48.2 \\
+\bottomrule
+\end{tabular}}
+\end{table}

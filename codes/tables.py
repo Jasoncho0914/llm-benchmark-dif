@@ -1,6 +1,7 @@
 """Small LaTeX writer shared by the paper tables."""
 import numpy as np
 from .common import OUTPUT
+from . import reporting
 
 
 def number(value,digits=1):
@@ -27,3 +28,4 @@ def write(filename,label,caption,headers,rows,alignment=None):
     lines += [' & '.join(map(str,row))+r' \\' for row in rows]
     lines += [r'\bottomrule',r'\end{tabular}}',r'\end{table}']
     (OUTPUT/filename).write_text('\n'.join(lines)+'\n')
+    reporting.show_table(label,caption,headers,rows)

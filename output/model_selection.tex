@@ -1,0 +1,20 @@
+\begin{table}[ht]
+\centering
+\caption{Model counts remaining after each selection step. Filters are applied sequentially. The final two rows give the family breakdown.}
+\label{tab:model_selection}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lr}
+\toprule
+Selection step & Model count \\
+\midrule
+Start with the curated dataset & 1{,}642 \\
+Retain Llama-3-8B and Qwen2-7B families & 1{,}299 \\
+Require evaluation logs for all six benchmarks & 1{,}295 \\
+Retain one model per identical correctness pattern & 1{,}281 \\
+Require responses to every retained question & 1{,}280 \\
+Llama family in the final sample & 909 \\
+Qwen family in the final sample & 371 \\
+\bottomrule
+\end{tabular}}
+\end{table}

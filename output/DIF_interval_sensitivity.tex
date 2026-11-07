@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\caption{Sensitivity to fixed score-interval width. Coverage columns give the percentage of models matched as Llama/Qwen pairs. The remaining columns give Category-C prevalence / the share of Category-C questions favoring Qwen. Primary matching uses merged intervals.}
+\label{tab:strata}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Benchmark & Matched: 1 pt & Matched: 2 pt & Matched: 3 pt & Matched: 5 pt & C / Qwen: 1 pt & C / Qwen: 2 pt & C / Qwen: 3 pt & C / Qwen: 5 pt \\
+\midrule
+BBH & 81/80 & 93/89 & 94/99 & 100/100 & 61/50 & 59/49 & 58/49 & 60/50 \\
+GPQA & 98/99 & 99/100 & 100/100 & 99/99 & 52/52 & 52/52 & 50/52 & 49/53 \\
+IFEval & 55/58 & 88/95 & 97/100 & 99/100 & 34/51 & 36/52 & 36/51 & 37/53 \\
+MATH & 12/22 & 24/30 & 40/38 & 100/58 & 1/40 & 3/48 & 6/40 & 7/52 \\
+MMLU-Pro & 76/28 & 88/42 & 96/49 & 100/53 & 43/51 & 44/51 & 44/51 & 50/54 \\
+MuSR & 93/91 & 94/95 & 95/99 & 97/100 & 66/51 & 66/51 & 65/50 & 66/51 \\
+\bottomrule
+\end{tabular}}
+\end{table}

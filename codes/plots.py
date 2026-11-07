@@ -5,6 +5,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from .common import OUTPUT
+from . import reporting
 
 def p_latex(p):
     return '$<0.001$' if p<.001 else f'${p:.3f}$'
@@ -41,7 +42,7 @@ def category_figure(benchmark, details, summaries, filename):
     fig.tight_layout(rect=(0,.035,1,.95))
     for ext in ['pdf']:
         fig.savefig(OUTPUT/f'{filename}.{ext}',dpi=180,bbox_inches='tight')
-    plt.close(fig)
+    reporting.show_figure(fig); plt.close(fig)
 
 def plot_selection(table):
     with plt.rc_context({'font.size':12, 'pdf.fonttype':42}):
@@ -57,7 +58,7 @@ def plot_selection(table):
         ax.spines[['top','right']].set_visible(False)
         for ext in ['pdf']:
             fig.savefig(OUTPUT/f'fig_bbh_answer_selection.{ext}',dpi=220)
-        plt.close(fig)
+        reporting.show_figure(fig); plt.close(fig)
 
 
 COLORS={'All questions':'#555555','Favor Qwen':'#2ca02c','Favor Llama':'#d62728'}
@@ -78,7 +79,7 @@ def overall_gaps(summary):
         ax.set_title('BBH' if b=='bbh' else 'MuSR');ax.grid(axis='y',alpha=.15)
         ax.spines[['top','right']].set_visible(False)
     axes[0].set_ylabel('Qwen − Llama matched accuracy gap (pp)')
-    fig.tight_layout();fig.savefig(OUTPUT/'overall_rq3.png',dpi=190);plt.close(fig)
+    fig.tight_layout();fig.savefig(OUTPUT/'overall_rq3.png',dpi=190);reporting.show_figure(fig); plt.close(fig)
 
 
 def fold_gap_curves(curves):
@@ -105,4 +106,4 @@ def fold_gap_curves(curves):
                        frameon=False,fontsize=10,columnspacing=1,handlelength=1.5,labelspacing=.3)
             fig.subplots_adjust(left=.17,right=.985,bottom=.085,top=.88,hspace=.18)
             fig.savefig(OUTPUT/f'{b}_gap_curves_large_text.pdf',bbox_inches='tight',pad_inches=.035)
-            plt.close(fig)
+            reporting.show_figure(fig); plt.close(fig)

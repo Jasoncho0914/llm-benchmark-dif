@@ -3,6 +3,7 @@ import ast,json
 import numpy as np
 import pandas as pd
 from .common import OUTPUT,data,dif,matching
+from . import reporting
 
 def escape(text):
     return str(text).replace('\\',r'\textbackslash{}').replace('&',r'\&').replace('%',r'\%').replace('_',r'\_').replace('#',r'\#').replace('$',r'\$')
@@ -76,6 +77,7 @@ def item_examples(study):
             r'\end{minipage}'+(r'\hfill' if i%2==0 else ''),
         ])
         if i%2==1:lines.extend(['',r'\medskip',''])
-    (OUTPUT/'DIF_item_examples.tex').write_text('\n'.join(lines)+'\n')
+    (OUTPUT/'DIF_item_examples.tex').write_text('\n'.join(lines).rstrip()+'\n')
+    reporting.show_examples(chosen)
     study.results["examples"]=pd.DataFrame(chosen)
     return study.results["examples"]

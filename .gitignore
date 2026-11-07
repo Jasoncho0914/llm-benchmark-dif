@@ -1,6 +1,5 @@
-# Downloaded data and generated paper outputs are local only.
+# Downloaded data are local only.
 /rawdata/
-/output/
 
 # Local environments, caches and notebooks' checkpoints.
 .venv*/

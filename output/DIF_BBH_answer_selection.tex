@@ -1,0 +1,21 @@
+\begin{table}[ht]
+\centering
+\caption{Actual answer selection on retained BBH questions. Model-level rates give equal weight to both correct answers. Differences adjust for overall BBH accuracy. Intervals are 95\% percentiles from 1,000 resamples of recorded model-lineage clusters.}
+\label{tab:bbh-answer-selection}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+Task & Selected answer & Llama (\%) & Qwen (\%) & Adjusted gap [95\% CI] \\
+\midrule
+navigate & No & 48.4 & 61.1 & +13.9 [+10.8, +16.6] \\
+web\_of\_lies & No & 21.2 & 43.4 & +22.9 [+19.1, +26.6] \\
+causal\_judgement & No & 30.3 & 45.2 & +15.8 [+13.3, +18.5] \\
+sports\_understanding & no & 40.9 & 56.9 & +17.0 [+14.4, +19.4] \\
+snarks & (B) & 25.9 & 47.8 & +21.9 [+19.5, +24.8] \\
+hyperbaton & (B) & 50.4 & 75.4 & +26.0 [+22.3, +30.0] \\
+formal\_fallacies & invalid & 29.6 & 41.7 & +10.7 [+8.2, +13.0] \\
+boolean\_expressions & True & 55.7 & 57.6 & +2.8 [+1.0, +4.5] \\
+\bottomrule
+\end{tabular}}
+\end{table}

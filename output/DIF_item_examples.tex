@@ -1,0 +1,49 @@
+\paragraph{Individual items illustrate the answer patterns.}
+Examples~\ref{ex:bbh-qwen}--\ref{ex:musr-llama} show Category-C items favoring each family on BBH and MuSR. The BBH examples have different correct yes/no answers; the MuSR examples have different correct-answer positions. MuSR excerpts show the final question and options, with the preceding narratives omitted. Accuracy within the median stratum uses the matching interval containing the median-score model among matched models.
+\noindent
+\begin{minipage}[t]{0.485\linewidth}
+% Source unit: bbh_navigate/123; median matching interval: 51--52 percent
+\itemexample
+  {BBH $\cdot$ favors \textbf{Qwen}}
+  {``If you follow these instructions, do you return to the starting point? Take 6 steps. Take 5 steps. Take 6 steps.''}
+  {$\Delta_{\mathrm{MH}}=+8.80$; Navigation; correct answer: No}
+  {Overall: Llama 16\%, Qwen 84\%}
+  {Median stratum: Llama 15\%, Qwen 73\% ($+59$~pp)}
+  {ex:bbh-qwen}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\linewidth}
+% Source unit: bbh_navigate/32; median matching interval: 51--52 percent
+\itemexample
+  {BBH $\cdot$ favors \textbf{Llama}}
+  {``If you follow these instructions, do you return to the starting point? Take 10 steps. Turn left. Turn left. Take 10 steps.''}
+  {$\Delta_{\mathrm{MH}}=-6.85$; Navigation; correct answer: Yes}
+  {Overall: Llama 87\%, Qwen 25\%}
+  {Median stratum: Llama 85\%, Qwen 33\% ($-52$~pp)}
+  {ex:bbh-llama}
+\end{minipage}
+
+\medskip
+
+\noindent
+\begin{minipage}[t]{0.485\linewidth}
+% Source unit: musr_murder_mysteries/196; median matching interval: 43--44 percent
+\itemexample
+  {MuSR $\cdot$ favors \textbf{Qwen}}
+  {``Who is the most likely murderer? (1) Elizabeth. (2) Freya.''}
+  {$\Delta_{\mathrm{MH}}=+8.27$; Murder mysteries; correct option: 1}
+  {Overall: Llama 41\%, Qwen 95\%}
+  {Median stratum: Llama 26\%, Qwen 97\% ($+71$~pp)}
+  {ex:musr-qwen}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\linewidth}
+% Source unit: musr_murder_mysteries/145; median matching interval: 43--44 percent
+\itemexample
+  {MuSR $\cdot$ favors \textbf{Llama}}
+  {``Who is the most likely murderer? (1) Charlotte. (2) Rachel.''}
+  {$\Delta_{\mathrm{MH}}=-8.20$; Murder mysteries; correct option: 2}
+  {Overall: Llama 53\%, Qwen 6\%}
+  {Median stratum: Llama 71\%, Qwen 3\% ($-68$~pp)}
+  {ex:musr-llama}
+\end{minipage}
+
+\medskip

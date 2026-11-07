@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\caption{DIF prevalence and direction for Llama (909 models) and Mistral (273 models). Filters, matching and inference follow the primary procedure and are applied separately to each pair. Directional shares and effect sizes use Category-C items.}
+\label{tab:dif-llama-mistral}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Benchmark & Items & \% A & \% B & \% C & \% C favor Mistral & \% C favor Llama & Median $|\Delta_{\mathrm{MH}}|$ (C) \\
+\midrule
+BBH & 5{,}653 & 29.8 & 17.4 & 52.8 & 48.7 & 51.3 & 3.81 \\
+GPQA & 445 & 28.1 & 20.4 & 51.5 & 47.2 & 52.8 & 3.55 \\
+IFEval & 523 & 35.9 & 22.4 & 41.7 & 50.0 & 50.0 & 3.31 \\
+MATH & 920 & 85.5 & 8.6 & 5.9 & 53.7 & 46.3 & 4.33 \\
+MMLU-Pro & 10{,}611 & 41.3 & 17.1 & 41.6 & 47.8 & 52.2 & 4.17 \\
+MuSR & 670 & 25.4 & 16.4 & 58.2 & 52.1 & 47.9 & 4.04 \\
+\bottomrule
+\end{tabular}}
+\end{table}

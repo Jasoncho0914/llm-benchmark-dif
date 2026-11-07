@@ -123,4 +123,3 @@ def save_docs(subtask: str, lines: list[dict]) -> None:
                 f.write(json.dumps({"doc_id": line.get("doc_id"), "doc_hash": line.get("doc_hash"),
                                     "doc": line.get("doc")}) + "\n")
                 seen.add((str(line.get("doc_id")), line.get("doc_hash")))
-
