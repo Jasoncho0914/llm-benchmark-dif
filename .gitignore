@@ -1,0 +1,37 @@
+# Downloaded data and generated paper outputs are local only.
+/rawdata/
+/output/
+
+# Local environments, caches and notebooks' checkpoints.
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+*.log
+
+# Credentials and private authentication files must never be committed.
+.env
+.env.*
+.git-credentials
+.netrc
+.npmrc
+.pypirc
+.aws/
+.ssh/
+.hf/
+.huggingface/
+.config/huggingface/
+.cache/
+token
+stored_tokens
+secrets/
+secrets.*
+credentials.json
+credentials*.json
+*token*.json
+*.pem
+*.key
+*.p12
+*.pfx
