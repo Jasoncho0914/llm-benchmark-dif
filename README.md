@@ -26,13 +26,11 @@ python -m codes.reporting
 
 ## Data access
 
-Download the [analysis data from Google Drive](https://drive.google.com/file/d/1MglQxb9qink08iKhzKJG42MOeT_8DJ_2/view?usp=sharing) and extract the archive into the repository root. After extraction, the repository should contain `rawdata/models.parquet`, `rawdata/units.parquet`, `rawdata/matrices/`, and the other input files.
+We obtain question-level evaluation logs and model metadata from the [Open LLM Leaderboard v2 on Hugging Face](https://huggingface.co/open-llm-leaderboard). Run `reproduce.ipynb` from top to bottom to download these files, prepare the analysis inputs in `rawdata/`, and generate the paper's tables and figures. Data preparation includes grading MATH responses with Math-Verify. If the inputs are already present, the notebook reuses them.
 
-With these inputs in place, run `reproduce.ipynb` from top to bottom. No Hugging Face login is needed to use the downloaded analysis data. The notebook uses existing complete inputs without downloading or changing them.
+Downloading from Hugging Face requires an account with access to the leaderboard's restricted evaluation-log datasets and a read token. The notebook uses your saved Hugging Face login or asks for the token through a hidden prompt.
 
-Alternatively, if `rawdata/` is missing or incomplete, the notebook downloads the original evaluation logs and metadata from Hugging Face, regrades MATH answers with Math-Verify, and builds the inputs there. This route requires a Hugging Face account with access to the restricted evaluation-log datasets and a read token. The notebook uses a saved local login or asks for the token through a hidden prompt. **Do not paste tokens into notebook cells, source files, or this repository.** Downloads can resume after interruption; temporary download records are removed after a successful build.
-
-`codes/source_manifest.json` records the model names, evaluation dates, and question-version identifiers used to retrieve the analysis inputs. It does not contain question responses or correctness matrices.
+A copy of the prepared `rawdata/` folder is also available on [Google Drive](https://drive.google.com/file/d/1MglQxb9qink08iKhzKJG42MOeT_8DJ_2/view?usp=sharing). To use this copy, extract the archive into the repository root and run the notebook.
 
 ## Measured analysis resources
 
