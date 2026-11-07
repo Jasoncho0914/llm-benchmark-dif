@@ -30,7 +30,7 @@ We obtain question-level evaluation logs and model metadata from the [Open LLM L
 
 Downloading from Hugging Face requires an account with access to the leaderboard's restricted evaluation-log datasets and a read token. The notebook uses your saved Hugging Face login or asks for the token through a hidden prompt.
 
-A copy of the prepared `rawdata/` folder is also available on [Google Drive](https://drive.google.com/file/d/1MglQxb9qink08iKhzKJG42MOeT_8DJ_2/view?usp=sharing). To use this copy, extract the archive into the repository root and run the notebook.
+The repository does not redistribute the Open LLM Leaderboard’s per-model evaluation logs or the underlying benchmark content. Reproduction scripts retrieve these records from their original Hugging Face repositories after the user has authenticated and accepted any applicable access conditions, then construct the processed analysis dataset locally. Each source asset remains subject to its original license and terms of use.
 
 ## Measured analysis resources
 
