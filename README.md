@@ -35,3 +35,5 @@ The repository does not redistribute the Open LLM Leaderboard’s per-model eval
 ## Measured analysis resources
 
 The complete notebook analysis, starting from the curated inputs, ran on an 8-core Apple M1 machine with 16 GiB of RAM, with numerical libraries limited to one thread. The latest run took 2.32 minutes and reached 1.28 GiB peak process memory. Inputs, code, and generated results occupy approximately 0.7 GB of working storage. These measurements exclude downloading and rebuilding the source logs and installing the Python environment.
+
+Downloading the full evaluation logs and preparing the analysis inputs may take several hours, depending on network speed and available CPU resources. This estimate has not been verified through a complete download and rebuild.
